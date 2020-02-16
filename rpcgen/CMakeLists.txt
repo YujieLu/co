@@ -9,6 +9,9 @@ endif()
 target_link_libraries(rpcgen
   ${LIBS_TO_LINK}
   )
-install(TARGETS rpcgen
-  RUNTIME DESTINATION bin
-  )
+  
+if (${PROJECT_NAME}_INSTAL)
+    install(TARGETS rpcgen
+    RUNTIME DESTINATION bin
+    )
+endif()
